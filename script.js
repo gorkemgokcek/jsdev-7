@@ -20,9 +20,14 @@ $(document).ready(function() {
                             <p>${user.location.country}</p>
                         </div>
                     `);
-
+                    
                     card.on('click', function() {
                         const u = usersData[$(this).data('index')];
+
+                        $(this).animate({ marginLeft: '+=15px' }, 100)
+                               .animate({ marginLeft: '-=30px' }, 100)
+                               .animate({ marginLeft: '+=15px' }, 100);
+
                         $.fancybox.open({
                             src: `
                                 <div class="fancybox-content">
